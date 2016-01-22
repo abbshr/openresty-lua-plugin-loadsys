@@ -29,7 +29,7 @@ end
 local last_access_time = 0
 local last_remain = 0
 if bucket ~= ngx.null then
-  bucket = split(tostring(bucket), '%#')
+  bucket = tostring(bucket):split('%#')
   last_access_time = bucket[1]
   last_remain = bucket[2]
 end
