@@ -1,0 +1,12 @@
+return {
+  HMAC_KEY = "";
+
+  REDIS_HOST = "";
+  REDIS_PORT = 6379;
+
+  REDIS_CONN_POOL_SIZE = 100;
+  REDIS_CONN_MAX_IDLE_MS = 100000;
+  REDIS_CONN_TIMEOUT = 1000;
+
+  BUCKET_STATUS = 'bucket_status'
+}

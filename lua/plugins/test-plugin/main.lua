@@ -5,11 +5,6 @@ local _M = {
 function _M:exec (ctx)
   -- plugin logic
   local failure = false
-  ctx.result = {
-    err_code = 200;
-    err_msg = "Empty";
-  }
-
   -- must return the state of the execute result: true/false
   return failure
 end
