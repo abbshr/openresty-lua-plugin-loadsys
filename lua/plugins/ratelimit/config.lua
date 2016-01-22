@@ -2,7 +2,7 @@
 local ip_cfg = {
   ['127.0.0.1'] = {
     interval = 1000 * 60;
-    capicity = 1000;
+    capicity = 10;
   };
   ['192.168.*.*'] = {
     interval = 1000 * 60;

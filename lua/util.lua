@@ -56,7 +56,7 @@ function _M.ipmatch (cfg, ip)
   -- body...
   local matched
   local tokens = ip:split('%.')
-  for rule, cfg in pairs(ip_cfg) do
+  for rule, cfg in pairs(cfg) do
     for i, patt in ipairs(rule:split('%.')) do
       if patt ~= '*' and tokens[i] ~= patt then
         matched = false

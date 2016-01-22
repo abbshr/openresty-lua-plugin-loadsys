@@ -1,7 +1,7 @@
 return {
-  HMAC_KEY = "";
+  HMAC_KEY = "abbshr";
 
-  REDIS_HOST = "";
+  REDIS_HOST = "127.0.0.1";
   REDIS_PORT = 6379;
 
   REDIS_CONN_POOL_SIZE = 100;

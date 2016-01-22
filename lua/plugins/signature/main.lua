@@ -151,3 +151,5 @@ function _M:init (args)
   -- body...
   return self
 end
+
+return _M
