@@ -1,3 +1,4 @@
 return {
-  "bootstrap"
+  "bootstrap";
+  "test-plugin";
 }

@@ -10,3 +10,9 @@ for DevOps.
 **under developing & designing.**
 
 experiment-used in production.
+
+Introduction
+---
+
+## Plugins System
+load plugins in `lua/plugin-list.lua`, triggered by priority per request.

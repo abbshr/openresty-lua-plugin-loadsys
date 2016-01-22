@@ -16,5 +16,5 @@ for _, plg_name in ipairs(plg_lst) do
 end
 
 table.sort(plugins, function (pa, pb)
-  return pa.PRIORI > pb.PRIORI
+  return pa.PRIORI < pb.PRIORI
 end)
