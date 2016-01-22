@@ -1,5 +1,4 @@
 logs
 lua/plugins/ratelimit
 lua/plugins/signature
-lua/plugins
 *_temp
