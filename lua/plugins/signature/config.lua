@@ -4,6 +4,6 @@ return {
   REDIS_CONN_TIMEOUT = 1000;
   REDIS_CONN_MAX_IDLE_MS = 100000;
   REDIS_CONN_POOL_SIZE = 100;
-  
-  BUCKET_STATUS = 'bucket_status';
+
+  HMAC_KEY = 'abbshr';
 }

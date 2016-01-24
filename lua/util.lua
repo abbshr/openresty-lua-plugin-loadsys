@@ -12,6 +12,7 @@ function _M.err (code, message)
   ngx.status = ngx.HTTP_OK
   ngx.header["Content-Type"] = 'application/json'
   ngx.say(json.encode(res))
+  ngx.exit(ngx.HTTP_OK)
 end
 
 -- https://github.com/daurnimator/lua-http/blob/master/http/util.lua

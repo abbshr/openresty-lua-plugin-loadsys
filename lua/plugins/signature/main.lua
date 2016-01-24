@@ -2,7 +2,7 @@ local redis = require "resty.redis"
 local util = require "util"
 
 local exception_rules = require "plugins.signature.rules"
-local config = require "config"
+local config = require "plugins.signature.config"
 
 local ispassaway = util.ispassaway
 local encodeURIComponent = util.encodeURIComponent

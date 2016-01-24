@@ -8,6 +8,9 @@
 --   package.path = package.path .. ';' .. ngx.var.lua_package_path .. path
 -- end
 
+util = require 'util'
+err = util.err
+
 plugins = {}
 
 local plg_lst = require "plugin-list"

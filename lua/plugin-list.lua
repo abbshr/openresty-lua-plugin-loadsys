@@ -1,5 +1,5 @@
 return {
-  "bootstrap";
+  -- "bootstrap";
   "test-plugin";
   "ratelimit";
   -- "signature";

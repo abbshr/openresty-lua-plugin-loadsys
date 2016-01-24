@@ -1,8 +1,8 @@
 local redis = require 'resty.redis'
 local util = require "util"
 
-local gcfg = require "plugins.ratelimit.config"
-local config = require "config"
+local strategy = require "plugins.ratelimit.strategy"
+local config = require "plugins.ratelimit.config"
 
 local _M = {
   PRIORI = 1
@@ -12,7 +12,7 @@ function _M:exec (ctx)
   local ipv4 = ngx.var.remote_addr
 
   -- 检查是否配置限速策略
-  local cfg = util.ipmatch(gcfg, ipv4)
+  local cfg = util.ipmatch(strategy, ipv4)
   if not cfg then
     ctx.result = nil
     return
@@ -52,8 +52,9 @@ function _M:exec (ctx)
   -- TODO: 使用一个 agent 进程周期性搜集 throttle workers 统计数据, 做动态负载分流
   local current_access_time = ngx.now() * 1000
   local duration = current_access_time - last_access_time
+  local rate = cfg.capicity / cfg.interval
 
-  local used = math.max(0, last_remain - cfg['rate'] * duration)
+  local used = math.max(0, last_remain - rate * duration)
   if used + 1 > cfg['capicity'] then
     red:set_keepalive(config.REDIS_CONN_MAX_IDLE_MS, config.REDIS_CONN_POOL_SIZE)
     ctx.result = {
